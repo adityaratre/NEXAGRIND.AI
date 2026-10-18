@@ -1,55 +1,152 @@
-<!doctype html>
-<html lang="en-IN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#0b1218" />
-    <meta name="color-scheme" content="dark light" />
-    <meta name="description" content="LokPravaah helps citizens document local civic issues, track report updates, and prepare complaint and RTI drafts. An independent civic-tech platform, not a government portal." />
-    <meta name="keywords" content="LokPravaah, civic issues, citizen grievance, public complaint, civic reporting, RTI draft, local issues, public accountability, India" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>LokPravaah | Citizen Grievance & Civic Accountability Platform</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="LokPravaah" />
-    <meta property="og:title" content="LokPravaah | Citizen Grievance & Civic Accountability Platform" />
-    <meta property="og:description" content="Document local civic issues, follow report status updates, and prepare clearer complaint and RTI drafts with LokPravaah." />
-    <meta property="og:locale" content="en_IN" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="LokPravaah | Citizen Grievance & Civic Accountability Platform" />
-    <meta name="twitter:description" content="An independent civic-tech platform for recording local issues and organising citizen action." />
-    <link rel="canonical" href="__LOKPRAVAAH_SITE_URL__/" data-site-dependent="true" />
-    <meta property="og:url" content="__LOKPRAVAAH_SITE_URL__/" data-site-dependent="true" />
-    <meta property="og:image" content="__LOKPRAVAAH_SITE_URL__/og-image.png" data-site-dependent="true" />
-    <meta property="og:image:width" content="1200" data-site-dependent="true" />
-    <meta property="og:image:height" content="630" data-site-dependent="true" />
-    <meta name="twitter:image" content="__LOKPRAVAAH_SITE_URL__/og-image.png" data-site-dependent="true" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "LokPravaah",
-        "applicationCategory": "CivicApplication",
-        "operatingSystem": "Web",
-        "description": "An independent civic-tech platform for documenting public issues, tracking report updates, and preparing complaint and Right to Information (RTI) drafts.",
-        "inLanguage": ["en-IN", "hi-IN"],
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-        "creator": {
-          "@type": "Person",
-          "name": "Aditya Ratre",
-          "url": "https://work.adityaratre.workers.dev/"
-        },
-        "disclaimer": "LokPravaah is an independent civic-tech project, not an official government service. Reports are not automatically submitted to government departments."
-      }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaGrind.AI – Welcome</title>
+    <style>
+        :root {
+            --primary-color: #00bcd4; --primary-light: #4dd0e1;
+            --bg-dark: #121212; /* Static Black Background */
+            --bg-card: #1f1f1f; 
+            --text-light: #f0f0f0; --text-secondary: #a0a0a0; --border-color: #333333;
+            --shadow-color: rgba(0, 188, 212, 0.4); 
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif; 
+            color: var(--text-light); 
+            background: var(--bg-dark); /* Static Dark Background */
+            min-height: 100vh; 
+            overflow-x: hidden; 
+            line-height: 1.6;
+        }
+        
+        /* Removed @keyframes gradientBG and the animation property */
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            from { transform: scale(1); opacity: 0.8; }
+            to { transform: scale(1.05); opacity: 1; }
+        }
+
+        a { text-decoration: none; color: var(--primary-color); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* --- Header --- */
+        header {
+            background-color: rgba(30, 30, 30, 0.98); 
+            backdrop-filter: blur(10px); padding: 15px 0; border-bottom: 1px solid var(--border-color);
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+        }
+        .navbar { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary-color); }
+        
+        .header-buttons { display: flex; align-items: center; gap: 15px; }
+        .nav-link { font-weight: 500; color: var(--text-secondary); transition: color 0.3s ease; font-size: 1rem; }
+        .nav-link:hover { color: var(--primary-color); }
+        .nav-button {
+            background-color: var(--primary-color); color: var(--bg-dark); padding: 10px 18px;
+            border-radius: 4px; font-weight: 700; transition: all 0.3s ease;
+        }
+        .nav-button-logout { background-color: #ff6b6b; }
+        .nav-button-logout:hover { background-color: #e54d4d; }
+        .nav-button:hover { background-color: var(--primary-light); transform: translateY(-2px); box-shadow: 0 4px 15px var(--shadow-color); }
+        .user-greeting { font-weight: 600; color: var(--text-light); display: none; margin-right: 5px; }
+
+        /* --- Main Splash Page --- */
+        .splash-container {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            min-height: 85vh; text-align: center; padding: 0 20px; opacity: 0;
+            animation: fadeIn 1s ease-out 0.5s forwards;
+            background-color: var(--bg-dark); /* Ensure static background */
+        }
+        
+        .splash-container h1 { 
+            font-size: clamp(3rem, 7vw, 5rem); margin-bottom: 20px; color: var(--text-light);
+            text-shadow: 0 0 15px var(--shadow-color);
+        }
+        .splash-container .logo-icon { 
+            font-size: 5rem; margin-bottom: 10px; color: var(--primary-color);
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        .splash-container p { 
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem); max-width: 700px; margin-bottom: 40px; 
+            color: var(--text-secondary); 
+        }
+        
+        .splash-button {
+            background-color: var(--primary-color); 
+            color: var(--bg-dark); 
+            padding: 18px 50px; font-size: 1.3rem; font-weight: 700; border-radius: 4px;
+            transition: all 0.3s ease; box-shadow: 0 0 25px var(--shadow-color);
+        }
+        .splash-button:hover { transform: scale(1.03) translateY(-3px); background-color: var(--primary-light); }
+        
+        /* Footer */
+        footer { background-color: var(--bg-dark); color: var(--text-secondary); padding: 30px 0; text-align: center; border-top: 1px solid var(--border-color); }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .navbar { flex-direction: column; gap: 15px; }
+            .header-buttons { justify-content: center; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="/" class="logo">🧠 NexaGrind.AI</a>
+            <div class="header-buttons">
+                <a href="/app.html" class="nav-link">Get Help</a> 
+                <a href="/contact.html" class="nav-link">Contact Us</a>
+                <a href="/reviews.html" class="nav-link">Reviews</a>
+                
+                <!-- Login/Logout Status -->
+                <span id="user-greeting" class="user-greeting"></span>
+                <a href="/auth/google" id="login-button" class="nav-button">Login with Google</a>
+                <a href="/auth/logout" id="logout-button" class="nav-button nav-button-logout" style="display: none;">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Animated Splash Content -->
+    <main class="splash-container">
+        <div class="logo-icon">💡</div>
+        <h1>The Universal Problem Solver</h1>
+        <p>Paste any question, get simple explanations, and chat with an AI that helps you find the right answer, faster. Your smart assistant for learning and problem-solving.</p>
+        <a href="/app.html" class="splash-button">Launch the Problem Solver</a>
+    </main>
+
+    <footer>
+        <div class="container"><p>&copy; 2025 NexaGrind.AI. All rights reserved.</p></div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const res = await fetch('/api/user'); 
+                const data = await res.json();
+                
+                if (data.user) {
+                    document.getElementById('user-greeting').textContent = `Hi, ${data.user.firstName}`;
+                    document.getElementById('user-greeting').style.display = 'inline';
+                    document.getElementById('login-button').style.display = 'none';
+                    document.getElementById('logout-button').style.display = 'inline-block';
+                } else {
+                    document.getElementById('user-greeting').style.display = 'none';
+                    document.getElementById('login-button').style.display = 'inline-block';
+                    document.getElementById('logout-button').style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Error fetching user status:', error);
+            }
+        });
     </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+</body>
 </html>
