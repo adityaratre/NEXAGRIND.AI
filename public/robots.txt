@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Sitemap URL is added automatically during production build when VITE_SITE_URL is configured.

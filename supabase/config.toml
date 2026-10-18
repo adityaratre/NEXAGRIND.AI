@@ -1,0 +1,9 @@
+project_id = "lokpravaah"
+
+[functions.janwatch-ai]
+# The function validates the user's bearer token itself with Supabase auth.getUser().
+verify_jwt = false
+
+[functions.donation-webhook]
+# Gateway signatures authenticate this server-to-server endpoint.
+verify_jwt = false
